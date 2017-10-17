@@ -5,12 +5,14 @@
 //  Created by Angela Yu on 25/08/2015.
 //  Copyright (c) 2015 London App Brewery. All rights reserved.
 //
+//  Skeleton Project cloned on 15/10/2017
+//  Darragh Blake
+//
 
 import UIKit
 
 class ViewController: UIViewController {
     
-    //Place your instance variables here
     
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -30,7 +32,7 @@ class ViewController: UIViewController {
     
     
     func updateUI() {
-      
+        
     }
     
 
@@ -45,7 +47,7 @@ class ViewController: UIViewController {
     
     
     func startOver() {
-       
+        
     }
     
 
