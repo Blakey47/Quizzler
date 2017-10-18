@@ -24,8 +24,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let firstQuestion = allQuestions.list[0]
-        questionLabel.text = firstQuestion.questionText
+        questionLabel.text = allQuestions.list[0].questionText
         
     }
 
@@ -55,7 +54,13 @@ class ViewController: UIViewController {
     
     func checkAnswer() {
         
+        let correctAnswer = allQuestions.list[0].answer
         
+        if correctAnswer == pickedAnswer {
+            print("Your choice is correct.")
+        } else {
+            print("Your choice was inccorect.")
+        }
         
     }
     
