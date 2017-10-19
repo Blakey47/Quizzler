@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     let allQuestions = QuestionBank()
     var pickedAnswer : Bool = false
+    var questionNumber : Int = 0
+    var scoreNumber : Int = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -24,7 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        questionLabel.text = allQuestions.list[0].questionText
+        updateUI()
         
     }
 
@@ -39,34 +41,51 @@ class ViewController: UIViewController {
         
         checkAnswer()
         
+        questionNumber = questionNumber + 1
+        
+        nextQuestion()
     }
     
     
     func updateUI() {
-        
+        questionLabel.text = allQuestions.list[0].questionText
+        progressLabel.text = "1/13"
+        scoreLabel.text = "Score: 0"
     }
     
 
     func nextQuestion() {
+        
+        if questionNumber <= 12 {
+            questionLabel.text = allQuestions.list[questionNumber].questionText
+        } else {
+            print("End of Quiz.")
+            questionNumber = 0
+        }
+        
+        
+        progressLabel.text = "\(String(questionNumber + 1))/13"
+        scoreLabel.text = "Score: \(String(scoreNumber))"
         
     }
     
     
     func checkAnswer() {
         
-        let correctAnswer = allQuestions.list[0].answer
+        let correctAnswer = allQuestions.list[questionNumber].answer
         
         if correctAnswer == pickedAnswer {
-            print("Your choice is correct.")
+            print("Correct.")
+            scoreNumber = scoreNumber + 1
         } else {
-            print("Your choice was inccorect.")
+            print("Incorrect")
         }
         
     }
     
     
     func startOver() {
-        
+        updateUI()
     }
     
 
