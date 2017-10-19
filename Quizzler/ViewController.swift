@@ -48,24 +48,32 @@ class ViewController: UIViewController {
     
     
     func updateUI() {
-        questionLabel.text = allQuestions.list[0].questionText
-        progressLabel.text = "1/13"
-        scoreLabel.text = "Score: 0"
+        questionLabel.text = allQuestions.list[questionNumber].questionText
+        progressLabel.text = "\(String(questionNumber + 1))/13"
+        scoreLabel.text = "Score: \(String(scoreNumber))"
+        
+        progressBar.frame.size.width = (view.frame.size.width / 13) * CGFloat(questionNumber + 1)
     }
     
 
     func nextQuestion() {
         
         if questionNumber <= 12 {
-            questionLabel.text = allQuestions.list[questionNumber].questionText
+            updateUI()
         } else {
-            print("End of Quiz.")
-            questionNumber = 0
+            
+            let alert = UIAlertController(title: "Awesome", message: "End of quiz. Would you like to start over?", preferredStyle: .alert)
+            
+            let restartAction = UIAlertAction(title: "Restart", style: .default, handler: { (UIAlertAction) in
+                self.startOver()
+            })
+            
+            alert.addAction(restartAction)
+            
+            present(alert, animated: true, completion: nil)
+            
         }
         
-        
-        progressLabel.text = "\(String(questionNumber + 1))/13"
-        scoreLabel.text = "Score: \(String(scoreNumber))"
         
     }
     
@@ -85,6 +93,8 @@ class ViewController: UIViewController {
     
     
     func startOver() {
+        scoreNumber = 0
+        questionNumber = 0
         updateUI()
     }
     
