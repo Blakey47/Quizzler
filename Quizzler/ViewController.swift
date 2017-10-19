@@ -40,9 +40,7 @@ class ViewController: UIViewController {
         }
         
         checkAnswer()
-        
         questionNumber = questionNumber + 1
-        
         nextQuestion()
     }
     
@@ -57,7 +55,6 @@ class ViewController: UIViewController {
     
 
     func nextQuestion() {
-        
         if questionNumber <= 12 {
             updateUI()
         } else {
@@ -71,24 +68,19 @@ class ViewController: UIViewController {
             alert.addAction(restartAction)
             
             present(alert, animated: true, completion: nil)
-            
-        }
-        
-        
+            }
     }
     
     
     func checkAnswer() {
-        
         let correctAnswer = allQuestions.list[questionNumber].answer
         
         if correctAnswer == pickedAnswer {
-            print("Correct.")
+            ProgressHUD.showSuccess("Correct")
             scoreNumber = scoreNumber + 1
         } else {
-            print("Incorrect")
+            ProgressHUD.showError("Wrong")
         }
-        
     }
     
     

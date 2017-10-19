@@ -14,6 +14,8 @@
 		633646C91B8C657400FF45E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 633646C71B8C657400FF45E2 /* LaunchScreen.xib */; };
 		A74C08D21F969E140030BCB4 /* QuetionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74C08D11F969E140030BCB4 /* QuetionBank.swift */; };
 		A7A8DD751F93B1D500A69269 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A8DD741F93B1D500A69269 /* Question.swift */; };
+		A7E6ABC21F98F43C00178BB4 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A7E6ABBF1F98F41400178BB4 /* ProgressHUD.bundle */; };
+		A7E6ABC31F98F44200178BB4 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E6ABC11F98F41500178BB4 /* ProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		633646C81B8C657400FF45E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A74C08D11F969E140030BCB4 /* QuetionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuetionBank.swift; sourceTree = "<group>"; };
 		A7A8DD741F93B1D500A69269 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		A7E6ABBE1F98F41300178BB4 /* Quizzler-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Quizzler-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7E6ABBF1F98F41400178BB4 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		A7E6ABC01F98F41400178BB4 /* ProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		A7E6ABC11F98F41500178BB4 /* ProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,10 @@
 			children = (
 				633646C71B8C657400FF45E2 /* LaunchScreen.xib */,
 				633646BD1B8C657400FF45E2 /* Info.plist */,
+				A7E6ABBF1F98F41400178BB4 /* ProgressHUD.bundle */,
+				A7E6ABC01F98F41400178BB4 /* ProgressHUD.h */,
+				A7E6ABC11F98F41500178BB4 /* ProgressHUD.m */,
+				A7E6ABBE1F98F41300178BB4 /* Quizzler-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -162,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E6ABC21F98F43C00178BB4 /* ProgressHUD.bundle in Resources */,
 				633646C41B8C657400FF45E2 /* Main.storyboard in Resources */,
 				633646C91B8C657400FF45E2 /* LaunchScreen.xib in Resources */,
 				633646C61B8C657400FF45E2 /* Images.xcassets in Resources */,
@@ -177,6 +188,7 @@
 			files = (
 				A7A8DD751F93B1D500A69269 /* Question.swift in Sources */,
 				A74C08D21F969E140030BCB4 /* QuetionBank.swift in Sources */,
+				A7E6ABC31F98F44200178BB4 /* ProgressHUD.m in Sources */,
 				633646C11B8C657400FF45E2 /* ViewController.swift in Sources */,
 				633646BF1B8C657400FF45E2 /* AppDelegate.swift in Sources */,
 			);
@@ -314,7 +326,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DarraghBlakeQuizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzler/Quizzler-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -332,7 +344,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.DarraghBlakeQuizzler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzler/Quizzler-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
